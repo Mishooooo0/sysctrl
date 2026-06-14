@@ -1,0 +1,46 @@
+{
+  "name": "sysctrl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.sysctrl.agent",
+    "productName": "sysctrl",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.17.0",
+    "local-devices": "^4.0.0"
+  },
+  "devDependencies": {
+    "@nut-tree-fork/nut-js": "^4.2.6",
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.3"
+  }
+}
